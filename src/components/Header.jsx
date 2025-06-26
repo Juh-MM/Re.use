@@ -1,6 +1,6 @@
 export default function Header() {
     return(
-    <header className="fixed top-0 left-0 right-0 p-4 flex justify-between bg-amber-50 border-b-[0.5px] border-black" >
+    <header className="top-0 left-0 right-0 p-4 flex justify-between bg-stone-50 border-b-[0.5px] border-black" >
         <div>
             <h1 className="font-inter font-black text-3xl items-center">Re.use</h1>
         </div>
