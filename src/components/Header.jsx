@@ -1,4 +1,6 @@
 import Logo from '../../public/logo.svg';
+import car from '../assets/car.png';
+import profile from '../assets/profile.png';
 
 export default function Header() {
     return(
@@ -6,18 +8,19 @@ export default function Header() {
         <div>
             <img src={Logo} alt="" />
         </div>
-        <nav className="font-inter flex gap-5 items-center">
-            <a href="#">Feminino</a>
-            <a href="#">Masculino</a>
-            <a href="#">Acessórios</a>
-            <a href="#">Calçados</a>
-            <a href="#">Esportivo</a>
-            <a href="#">Infantil</a>
-            <a href="#">Outros</a>
+        <nav className="font-sans flex gap-8 items-center">
+            <a href="#" className="hover:font-bold">Home</a>
+            <a href="#" className="hover:font-bold">Feminino</a>
+            <a href="#" className="hover:font-bold">Masculino</a>
+            <a href="#" className="hover:font-bold">Acessórios</a>
+            <a href="#" className="hover:font-bold">Calçados</a>
+            <a href="#" className="hover:font-bold">Esportivo</a>
+            <a href="#" className="hover:font-bold">Infantil</a>
+            <a href="#" className="hover:font-bold">Outros</a>
         </nav>
         <div className="flex gap-3 items-center">
-            <h1>O</h1>
-            <h1>O</h1>
+            <img className="w-6" src={car} alt="icone de carrinho" />
+            <img className="w-7" src={profile} alt="icone de perfil" />
         </div>
     </header>
     )

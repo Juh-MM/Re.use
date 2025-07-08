@@ -11,6 +11,7 @@ export default function Home() {
             <Banners />
             <Faixa />
             <Secao />
+            <Secao />
             <FaixaFixa />
         </div>
     );
