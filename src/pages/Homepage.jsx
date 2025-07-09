@@ -9,12 +9,14 @@ export default function Home() {
     return (
         <div className='flex flex-col min-h-screen'>
             <Header />
-            <Banners />
-            <Faixa />
-            <Secao />
-            <Secao />
-            <Footer />
-            <FaixaFixa />
+            <div className='pt-16'>
+                <Banners />
+                <Faixa />
+                <Secao />
+                <Secao />
+                <Footer />
+                <FaixaFixa />
+            </div>
         </div>
     );
 }
