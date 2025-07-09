@@ -1,4 +1,4 @@
-import Logo from '../../public/logo.svg';
+import Logo from '../assets/logo.svg';
 import car from '../assets/car.png';
 import profile from '../assets/profile.png';
 
@@ -25,5 +25,3 @@ export default function Header() {
     </header>
     )
 }
-
-// className=""

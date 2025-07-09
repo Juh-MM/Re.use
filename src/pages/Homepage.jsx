@@ -3,6 +3,7 @@ import Banners from '../components/Banners';
 import Faixa from '../components/Faixa';
 import FaixaFixa from '../components/FaixaFixa';
 import Secao from '../components/Secao'
+import Footer from '../components/Footer'
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Faixa />
             <Secao />
             <Secao />
+            <Footer />
             <FaixaFixa />
         </div>
     );
