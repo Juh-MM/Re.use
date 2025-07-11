@@ -20,8 +20,8 @@ export default function Header() {
             <Link to="/outros" className="hover:font-bold">Outros</Link>
         </nav>
         <div className="flex gap-3 items-center">
-            <img className="w-6" src={car} alt="icone de carrinho" />
-            <img className="w-7" src={profile} alt="icone de perfil" />
+            <Link to="/carrinho"><img className="w-6" src={car} alt="icone de carrinho" /></Link>
+            <Link to="/"><img className="w-7" src={profile} alt="icone de perfil" /></Link>
         </div>
     </header>
     )

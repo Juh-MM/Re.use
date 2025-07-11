@@ -1,13 +1,13 @@
 import Header from '../components/Header';
-import Secao from '../components/Secao';
 import Footer from '../components/Footer';
+import DetalherProduto from '../components/DetalherProduto';
 
-export default function Masculino() {
+export default function ProdutoPage() {
     return (
         <div>
             <Header />
-            <div className='pt-16'>
-                <Secao />
+            <DetalherProduto />
+            <div className='fixed bottom-0 left-0 right-0'>
                 <Footer />
             </div>
         </div>

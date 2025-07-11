@@ -21,7 +21,7 @@ export default function Banners() {
         <img
             src={images[current]}
             alt={`Banner ${current + 1}`}
-            className="w-full max-h-[300px] object-cover rounded-md transition-opacity duration-700"
+            className="w-full h-full"
         />
 
         {/* Indicadores */}
