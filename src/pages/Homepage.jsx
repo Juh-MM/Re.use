@@ -13,7 +13,6 @@ export default function Home() {
                 <Banners />
                 <Faixa />
                 <Secao />
-                <Secao />
                 <Footer />
                 <FaixaFixa />
             </div>
