@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/Logo.svg';
 import car from '../assets/car.png';
 import profile from '../assets/profile.png';
 
@@ -17,7 +17,7 @@ export default function Header() {
             <Link to="/calcados" className="hover:font-bold">Calçados</Link>
             <Link to="/esportivo" className="hover:font-bold">Esportivo</Link>
             <Link to="/infantil" className="hover:font-bold">Infantil</Link>
-            <Link to="/outros" className="hover:font-bold">Outros</Link>
+            <Link to="/" className="hover:font-bold">Outros</Link>
         </nav>
         <div className="flex gap-3 items-center">
             <Link to="/carrinho"><img className="w-6" src={car} alt="icone de carrinho" /></Link>
