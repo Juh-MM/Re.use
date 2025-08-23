@@ -8,7 +8,7 @@ export default function Secao() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/produtos')
+        fetch('https://re-use-api.onrender.com/api/produtos')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Falha ao buscar os dados da API');
@@ -37,7 +37,7 @@ export default function Secao() {
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {products.map(product => (
-                <Card key={product._id} id={product._id} titulo={product.titulo} preco={product.preco} imagens={product.imagems} />
+                <Card key={product._id} id={product._id} titulo={product.titulo} preco={product.preco} imagens={product.imagens} />
             ))}
             </div>
         </div>
