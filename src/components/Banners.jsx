@@ -17,7 +17,7 @@ export default function Banners() {
     }, []);
 
     return (
-        <div className="bg-stone-50 p-4 w-full flex flex-col items-center">
+        <div className="bg-stone-50 px-12 py-4 w-full flex flex-col items-center">
         <img
             src={images[current]}
             alt={`Banner ${current + 1}`}

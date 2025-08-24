@@ -1,17 +1,29 @@
 import Card from './Card';
-import sale from '../assets/sale.png';
 import { useState, useEffect } from 'react';
 
-export default function Secao() {
+export default function Secao({ categoria }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [titulo, setTitulo] = useState('Nossos Garimpos');
 
     useEffect(() => {
-        fetch('https://re-use-api.onrender.com/api/produtos')
+
+        const baseUrl = 'https://re-use-api.onrender.com/api/produtos';
+
+        const url = categoria ? `${baseUrl}/categoria/${categoria}` : baseUrl;
+        setLoading(true);
+
+        if (categoria) {
+            setTitulo(categoria.charAt(0).toUpperCase() + categoria.slice(1));
+        } else {
+            setTitulo('Nossos Garimpos');
+        }
+
+        fetch(url)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Falha ao buscar os dados da API');
+                    throw new Error('Falha ao buscar os produtos da categoria' + categoria + '.');
                 }
                 return response.json(); 
             })
@@ -24,22 +36,26 @@ export default function Secao() {
             .finally(() => {
                 setLoading(false);
             });
-    }, []);
 
-    if (loading) return <p>Carregando produtos...</p>;
-    if (error) return <p>Erro: {error}</p>;
+    }, [categoria]);
+
+    if (loading) return <p className="text-center py-10">Carregando produtos...</p>;
+    if (error) return <p className="text-center py-10 text-red-600">Erro: {error}</p>;
 
     return (
-        <div className='flex flex-col gap-4 items-center py-8 border-b-[0.5px] border-stone-900 bg-stone-50'>
+        <div className='flex flex-col gap-4 items-center px-12 py-8 border-b-[0.5px] border-stone-900 bg-stone-50'>
             <div className='flex items-start gap-2'>
-                <img className='w-7' src={sale} alt="icone de promoção" />
-                <h1 className='font-bold text-xl'>Garimpos em promoção</h1>
+                <h1 className='font-bold text-xl'>{titulo}</h1>
             </div>
-            <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-                {products.map(product => (
-                <Card key={product._id} id={product._id} titulo={product.titulo} preco={product.preco} imagens={product.imagens} />
-            ))}
-            </div>
+            {products.length > 0 ? (
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                    {products.map(product => (
+                        <Card key={product._id} id={product._id} titulo={product.titulo} preco={product.preco} imagens={product.imagens || []} />
+                    ))}
+                </div>
+            ) : (
+                <p className="text-center py-10 text-gray-700">Nenhum produto encontrado nesta categoria.</p>
+            )}
         </div>
     )
 }

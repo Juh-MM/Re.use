@@ -1,6 +1,6 @@
 export default function Footer() {
     return(
-        <div className='flex flex-row bg-stone-900 justify-evenly text-white p-4 pb-19 pt-8'>
+        <div className='flex flex-row bg-stone-900 justify-evenly text-white p-4 pb-19 pt-8 '>
             <div className='items-start'>
                 <h1 className='font-bold'>Nossas redes:</h1>
                 <div className='flex flex-col'>
