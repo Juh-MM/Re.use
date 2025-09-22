@@ -1,41 +1,40 @@
 import Card from './Card';
 import { useState, useEffect } from 'react';
 
-export default function Secao({ categoria }) {
+export default function SecaoProdutos({ categoria }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [titulo, setTitulo] = useState('Nossos Garimpos');
 
     useEffect(() => {
-
-        const baseUrl = 'https://re-use-api.onrender.com/api/produtos';
-
-        const url = categoria ? `${baseUrl}/categoria/${categoria}` : baseUrl;
-        setLoading(true);
-
         if (categoria) {
             setTitulo(categoria.charAt(0).toUpperCase() + categoria.slice(1));
         } else {
-            setTitulo('Nossos Garimpos');
+            setTitulo('Novidades');
         }
 
-        fetch(url)
-            .then(response => {
+        const fetchProducts = async () => {
+            setLoading(true);
+            setError(null); 
+            try {
+                const baseUrl = 'https://re-use-api.onrender.com/api/produtos';
+                const url = categoria ? `${baseUrl}/categoria/${categoria}` : baseUrl;
+
+                const response = await fetch(url);
                 if (!response.ok) {
-                    throw new Error('Falha ao buscar os produtos da categoria' + categoria + '.');
+                    throw new Error('Falha ao buscar os produtos da categoria ' + (categoria || 'Novidades') + '.');
                 }
-                return response.json(); 
-            })
-            .then(data => {
-                setProducts(data); 
-            })
-            .catch(err => {
+                const data = await response.json();
+                setProducts(data);
+            } catch (err) {
                 setError(err.message);
-            })
-            .finally(() => {
+            } finally {
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchProducts();
 
     }, [categoria]);
 
@@ -43,8 +42,8 @@ export default function Secao({ categoria }) {
     if (error) return <p className="text-center py-10 text-red-600">Erro: {error}</p>;
 
     return (
-        <div className='flex flex-col gap-4 items-center px-12 py-8 border-b-[0.5px] border-stone-900 bg-stone-50'>
-            <div className='flex items-start gap-2'>
+        <section className='flex flex-col gap-4 items-center px-12 py-8 border-b-[0.5px] border-stone-900 bg-stone-50'>
+            <div className='flex items-center gap-2'>
                 <h1 className='font-bold text-xl'>{titulo}</h1>
             </div>
             {products.length > 0 ? (
@@ -56,6 +55,6 @@ export default function Secao({ categoria }) {
             ) : (
                 <p className="text-center py-10 text-gray-700">Nenhum produto encontrado nesta categoria.</p>
             )}
-        </div>
+        </section>
     )
 }

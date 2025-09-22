@@ -16,12 +16,12 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/feminino" element={<Feminino />} />
-      <Route path="/masculino" element={<Masculino />} />
-      <Route path="/acessorios" element={<Acessórios />} />
-      <Route path="/calcados" element={<Calçados />} />
-      <Route path="/infantil" element={<Infantil />} />
-      <Route path="/esportivo" element={<Esportivo />} />
-      <Route path="/outros" element={<Outros />} />
+      <Route path="/masculino" element={<Home />} />
+      <Route path="/acessorios" element={<Home />} />
+      <Route path="/calcados" element={<Home />} />
+      <Route path="/infantil" element={<Home />} />
+      <Route path="/esportivo" element={<Home />} />
+      <Route path="/outros" element={<Home />} />
 
 
       <Route path="/carrinho" element={<Carrinho />} />

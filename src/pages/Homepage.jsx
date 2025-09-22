@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import Banners from '../components/Banners';
 import Faixa from '../components/Faixa';
 import FaixaFixa from '../components/FaixaFixa';
-import Secao from '../components/Secao'
+import SecaoProdutos from '../components/SecaoProdutos'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
             <div className='pt-16'>
                 <Banners />
                 <Faixa />
-                <Secao />
+                <SecaoProdutos />
                 <Footer />
                 <FaixaFixa />
             </div>
