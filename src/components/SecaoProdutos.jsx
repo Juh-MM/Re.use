@@ -42,12 +42,12 @@ export default function SecaoProdutos({ categoria }) {
     if (error) return <p className="text-center py-10 text-red-600">Erro: {error}</p>;
 
     return (
-        <section className='flex flex-col gap-4 items-center px-12 py-8 border-b-[0.5px] border-stone-900 bg-stone-50'>
+        <section className='flex flex-col gap-8 items-center px-12 py-8  bg-stone-50'>
             <div className='flex items-center gap-2'>
                 <h1 className='font-bold text-xl'>{titulo}</h1>
             </div>
             {products.length > 0 ? (
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
                     {products.map(product => (
                         <Card key={product._id} id={product._id} titulo={product.titulo} preco={product.preco} imagens={product.imagens || []} />
                     ))}
