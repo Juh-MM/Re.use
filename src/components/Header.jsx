@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
-import Logo from '../assets/Logo.svg';
-import car from '../assets/car.png';
-import profile from '../assets/profile.png';
+import car from '../assets/icons/car.png';
+import profile from '../assets/icons/profile.png';
 
 export default function Header() {
     return(
     <header className="top-0 left-0 right-0 py-3 flex justify-center bg-stone-50 border-b-[0.5px] border-stone-900" >
         <div className='w-[92%] flex justify-between'>
             <div>
-            <Link to="/"><img src={Logo} className="h-6" alt="Logo Re.use" /></Link>
+            <Link to="/"><img src="Logo.svg" className="h-6" alt="Logo Re.use" /></Link>
             </div>
             <nav className="font-sans flex gap-8 items-center">
                 <Link to="/" className="hover:text-stone-500 text-base">Home</Link>
