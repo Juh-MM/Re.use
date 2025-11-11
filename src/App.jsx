@@ -1,11 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Homepage';
-import Feminino from './pages/Femininopage';
-import Masculino from './pages/Masculinopage';
+import Superiores from './pages/Superiorespage';
+import Inferiores from './pages/Inferiorespage';
 import Acessórios from './pages/Acessoriospage';
-import Calçados from './pages/Calcadospage';
-import Infantil from './pages/Infantilpage';
-import Esportivo from './pages/Esportivopage';
+import Calcados from './pages/Calcadospage';
 import Outros from './pages/Outrospage';
 
 import Produto from './pages/Produtopage';
@@ -15,14 +13,11 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/feminino" element={<Feminino />} />
-      <Route path="/masculino" element={<Home />} />
-      <Route path="/acessorios" element={<Home />} />
-      <Route path="/calcados" element={<Home />} />
-      <Route path="/infantil" element={<Home />} />
-      <Route path="/esportivo" element={<Home />} />
-      <Route path="/outros" element={<Home />} />
-
+      <Route path="/superiores" element={<Superiores />} />
+      <Route path="/inferiores" element={<Inferiores />} />
+      <Route path="/acessorios" element={<Acessórios />} />
+      <Route path="/calcados" element={<Calcados />} />
+      <Route path="/outros" element={<Outros />} />
 
       <Route path="/carrinho" element={<Carrinho />} />
       <Route path="/produto" element={<Produto />} />

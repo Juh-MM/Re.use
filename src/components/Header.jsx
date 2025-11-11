@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import car from '../assets/icons/car.png';
-import profile from '../assets/icons/profile.png';
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 
 export default function Header() {
     return(
@@ -11,15 +11,15 @@ export default function Header() {
             </div>
             <nav className="font-sans flex gap-8 items-center">
                 <Link to="/" className="hover:text-stone-500 text-base">Home</Link>
-                <Link to="/feminino" className="hover:text-stone-700 text-base">Superiores</Link>
-                <Link to="/" className="hover:text-stone-700 text-base">Inferiores</Link>
-                <Link to="/" className="hover:text-stone-700 text-base">Acessórios</Link>
-                <Link to="/" className="hover:text-stone-700 text-base">Calçados</Link>
-                <Link to="/" className="hover:text-stone-700 text-base">Outros</Link>
+                <Link to="/superiores" className="hover:text-stone-700 text-base">Superiores</Link>
+                <Link to="/inferiores" className="hover:text-stone-700 text-base">Inferiores</Link>
+                <Link to="/acessorios" className="hover:text-stone-700 text-base">Acessórios</Link>
+                <Link to="/calcados" className="hover:text-stone-700 text-base">Calçados</Link>
+                <Link to="/outros" className="hover:text-stone-700 text-base">Outros</Link>
             </nav>
             <div className="flex gap-5 items-center">
-                <Link to="/carrinho"><img className="w-6" src={car} alt="icone de carrinho" /></Link>
-                <Link to="/"><img className="w-7" src={profile} alt="icone de perfil" /></Link>
+                <Link to="/carrinho"><MdOutlineShoppingCart className="text-3xl" alt="icone de carrinho" /></Link>
+                <Link to="/"><CgProfile className="text-3xl" alt="icone de perfil" /></Link>
             </div>
         </div>
         

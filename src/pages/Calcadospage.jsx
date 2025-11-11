@@ -2,16 +2,12 @@ import Header from '../components/Header';
 import SecaoProdutos from '../components/SecaoProdutos';
 import Footer from '../components/Footer';
 
-export default function Calçados() {
+export default function Calcados() {
     return (
-        <div>
+        <div className="bg-stone-50 flex flex-col min-h-screen justify-between">
             <Header />
-            <div className='pt-16'>
-                <SecaoProdutos categoria="calcados" />
-                <div className='fixed bottom-0 left-0 right-0'>
-                    <Footer />
-                </div>
-            </div>
+            <SecaoProdutos categoria = "calçados" />    
+            <Footer />
         </div>
     )
 }

@@ -4,14 +4,10 @@ import Footer from '../components/Footer';
 
 export default function Acessórios() {
     return (
-        <div>
+        <div className="bg-stone-50 flex flex-col min-h-screen justify-between">
             <Header />
-            <div className='pt-16'>
-                <SecaoProdutos categoria="acessorios" />
-                <div className='fixed bottom-0 left-0 right-0'>
-                    <Footer />
-                </div>
-            </div>
+            <SecaoProdutos categoria="acessorios" />    
+            <Footer />
         </div>
     )
 }

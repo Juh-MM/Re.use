@@ -5,7 +5,7 @@ import FaixaFixa from '../components/FaixaFixa';
 import SecaoProdutos from '../components/SecaoProdutos'
 import Apresentacao from '../components/Apresentacao';  
 import Marcas from '../components/Marcas';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
 export default function Home() {
     return (
@@ -13,6 +13,7 @@ export default function Home() {
             <Header />
             <Banners />
             <Faixa />
+            <SecaoProdutos categoria="novidades" />
             <SecaoProdutos />
             <div className='bg-stone-50 flex justify-center'>
                 <hr className='w-[92%] h-0.5 text-stone-800'/>

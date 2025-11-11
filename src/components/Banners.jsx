@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import banner1 from '../assets/banners/banner 1.png';
-import banner2 from '../assets/banners/banner 2.png';
-import banner3 from '../assets/banners/banner 3.png';
+import banner1 from '../assets/banners/banner1.png';
+import banner2 from '../assets/banners/banner2.png';
+import banner3 from '../assets/banners/banner3.png';
 
 const images = [banner1, banner2, banner3];
 
@@ -17,19 +17,18 @@ export default function Banners() {
     }, []);
 
     return (
-        <div className="bg-stone-50 px-12 py-4 w-full flex flex-col items-center">
+        <div className="bg-stone-50 px-12 pb-4 pt-8 w-full flex flex-col items-center">
         <img
             src={images[current]}
             alt={`Banner ${current + 1}`}
-            className="w-full h-full"
+            className="w-full h-full rounded-xl"
         />
 
-        {/* Indicadores */}
         <div className="flex gap-3 mt-4">
             {images.map((_, index) => (
             <span
                 key={index}
-                className={`w-4 h-4 rounded-full ${
+                className={`w-3 h-3 rounded-full ${
                 index === current ? 'bg-stone-600' : 'bg-gray-300'
                 } transition-all duration-300`}
             />

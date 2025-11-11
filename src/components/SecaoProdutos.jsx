@@ -5,13 +5,14 @@ export default function SecaoProdutos({ categoria }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [titulo, setTitulo] = useState('Nossos Garimpos');
+    const [titulo, setTitulo] = useState();
 
     useEffect(() => {
         if (categoria) {
-            setTitulo(categoria.charAt(0).toUpperCase() + categoria.slice(1));
+            let tituloFormatado = categoria.replace('calcados', 'calçados').replace('acessorios', 'acessórios');
+            setTitulo(tituloFormatado.charAt(0).toUpperCase() + tituloFormatado.slice(1));
         } else {
-            setTitulo('Novidades');
+            setTitulo('Nossos Garimpos');
         }
 
         const fetchProducts = async () => {
