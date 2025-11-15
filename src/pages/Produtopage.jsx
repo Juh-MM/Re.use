@@ -1,15 +1,15 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Produto from '../components/Produto';
+import FaixaFixa from '../components/FaixaFixa';
 
 export default function ProdutoPage() {
     return (
         <div>
             <Header />
             <Produto />
-            <div className='fixed bottom-0 left-0 right-0'>
-                <Footer />
-            </div>
+            <Footer />
+            <FaixaFixa />
         </div>
     )
 }

@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import Arrow from '../assets/icons/Arrow 1.png';
+import { IoIosArrowBack } from "react-icons/io";
 
 export default function ReturnButton() {
     const navigate = useNavigate();
 
     return (
-        <div className="flex flex-row gap-2 items-start p-6" onClick={() => navigate(-1)}>
-            <img src={Arrow} />
+        <div className="p-6" onClick={() => navigate(-1)}>
+           <IoIosArrowBack className="text-5xl" />
         </div>
     );
 }

@@ -50,7 +50,13 @@ export default function SecaoProdutos({ categoria }) {
             {products.length > 0 ? (
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
                     {products.map(product => (
-                        <Card key={product._id} id={product._id} titulo={product.titulo} preco={product.preco} imagens={product.imagens || []} />
+                        <Card 
+                        key={product._id} 
+                        id={product._id} 
+                        titulo={product.titulo} 
+                        preco={product.preco} 
+                        imagens={product.imagens || []}
+                        />
                     ))}
                 </div>
             ) : (

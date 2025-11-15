@@ -20,7 +20,7 @@ export default function App() {
       <Route path="/outros" element={<Outros />} />
 
       <Route path="/carrinho" element={<Carrinho />} />
-      <Route path="/produto" element={<Produto />} />
+      <Route path="/produtos/:id" element={<Produto />} />
     </Routes>
   )
 }
