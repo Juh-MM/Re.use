@@ -11,7 +11,7 @@ export default function ProdutoDetalhePage ({ produto }) {
                     <ul className='list-disc pl-7'>
                         <li>Tamanho: {produto.tamanho}</li>
                         <li>Cor: {produto.cor}</li>
-                        <li>Marca: {produto.marca}</li>
+                        <li>Marca: {(produto.marca ? produto.marca : "Não informado")}</li>
                         <li>Composição: {produto.composicao}</li>
                         {produto.medidas && (<li>Medidas
                             <ul className='list-disc pl-7'>

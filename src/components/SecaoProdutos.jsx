@@ -41,6 +41,7 @@ export default function SecaoProdutos({ categoria }) {
 
     if (loading) return <p className="text-center py-10">Carregando produtos...</p>;
     if (error) return <p className="text-center py-10 text-red-600">Erro: {error}</p>;
+    
 
     return (
         <section className='flex flex-col gap-8 items-center px-12 py-8  bg-stone-50'>
