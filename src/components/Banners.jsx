@@ -17,11 +17,11 @@ export default function Banners() {
     }, []);
 
     return (
-        <div className="bg-stone-50 px-12 pb-4 pt-8 w-full flex flex-col items-center">
+        <div className="bg-stone-50 pb-4 pt-0 w-full flex flex-col items-center">
         <img
             src={images[current]}
             alt={`Banner ${current + 1}`}
-            className="w-full h-full rounded-xl"
+            className="w-full h-full"
         />
 
         <div className="flex gap-3 mt-4">
