@@ -22,7 +22,7 @@ export default function Card({id, titulo, preco, imagens}) {
                 <button className='absolute z-10 top-4 right-4' onClick={toggleFavorite}>
                     {isFavorited ? <FaHeart className='text-neutral-50 text-2xl' /> : <FaRegHeart className='text-neutral-50 text-2xl' />}
                 </button>
-                <img className='w-70 h-90 object-cover rounded-xl shadow-md' src={imageUrl} alt={titulo} />
+                <img className='w-full h-90 object-cover rounded-xl shadow-md' src={imageUrl} alt={titulo} />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-xl'></div>
                 <div className='absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent rounded-xl'></div>
                 <div className='absolute bottom-0 left-0 p-4 text-white font-bold'>

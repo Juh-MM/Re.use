@@ -11,7 +11,7 @@ import { FaBarcode } from "react-icons/fa6";
 
 export default function Footer() {
     return(
-        <div className='flex flex-row bg-stone-900 justify-evenly text-white p-4 pb-19 pt-8 '>
+        <div className='flex flex-col md:flex-row bg-stone-900 justify-evenly items-center w-full gap-5 text-white p-4 pb-19 pt-8 '>
             <div className='items-start'>
                 <h1 className='font-bold'>Nossas redes:</h1>
                 <div className='flex flex-col'>
@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='border-x px-20 border-white/50'>
+            <div className='border-none md:border-x md:px-20 border-white/50'>
                 <h1 className='font-bold'>Entre em contato:</h1>
                 <div className='flex flex-col'>
                     <div>

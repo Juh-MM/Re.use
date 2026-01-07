@@ -6,18 +6,18 @@ import Logo from '../../public/Logo.svg'
 
 export default function Header() {
     return(
-    <header className="top-0 left-0 right-0 py-3 flex justify-center bg-stone-50 border-b-[0.5px] border-stone-900" >
+    <header className="top-0 left-0 right-0 py-3 flex justify-center bg-stone-50 border-b-[0.5px] border-stone-900 w-full" >
         <div className='w-[92%] flex justify-between'>
             <div>
             <Link to="/"><img src={Logo} className="h-6" alt="Logo Re.use" /></Link>
             </div>
             <nav className="font-sans flex gap-8 items-center">
-                <Link to="/" className="hover:text-stone-500 text-base">Home</Link>
-                <Link to="/superiores" className="hover:text-stone-700 text-base">Superiores</Link>
-                <Link to="/inferiores" className="hover:text-stone-700 text-base">Inferiores</Link>
-                <Link to="/acessorios" className="hover:text-stone-700 text-base">Acessórios</Link>
-                <Link to="/calcados" className="hover:text-stone-700 text-base">Calçados</Link>
-                <Link to="/outros" className="hover:text-stone-700 text-base">Outros</Link>
+                <Link to="/" className="hover:text-stone-500 hidden md:block text-base">Home</Link>
+                <Link to="/superiores" className="hover:text-stone-700 hidden md:block text-base">Superiores</Link>
+                <Link to="/inferiores" className="hover:text-stone-700 hidden md:block text-base">Inferiores</Link>
+                <Link to="/acessorios" className="hover:text-stone-700 hidden md:block text-base">Acessórios</Link>
+                <Link to="/calcados" className="hover:text-stone-700 hidden lg:block text-base">Calçados</Link>
+                <Link to="/outros" className="hover:text-stone-700 hidden lg:block text-base">Outros</Link>
                 <Pesquisa />
             </nav>
             <div className="flex gap-5 items-center">
@@ -25,7 +25,6 @@ export default function Header() {
                 <Link to="/"><CgProfile className="text-3xl" alt="icone de perfil" /></Link>
             </div>
         </div>
-        
     </header>
     );
 }

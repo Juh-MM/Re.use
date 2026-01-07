@@ -8,7 +8,7 @@ import chanel from '../assets/marcas/chanel.png'
 
 export default function Marcas() {
     return (
-        <section className='flex flex-row gap-10 justify-center px-12 py-8 bg-stone-50'>
+        <section className='flex flex-row gap-10 justify-center px-12 py-8 bg-stone-50 overflow-x-auto'>
             <img src={adidas} className='h-12' alt="" />
             <img src={nike} className='h-12' alt="" />
             <img src={fila} className='h-12' alt="" />

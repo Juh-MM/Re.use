@@ -44,12 +44,12 @@ export default function SecaoProdutos({ categoria }) {
     
 
     return (
-        <section className='flex flex-col gap-8 items-center px-12 py-8  bg-stone-50'>
+        <section className='flex flex-col gap-8 items-center px-5 md:px-12 py-8  bg-stone-50'>
             <div className='flex items-center gap-2'>
                 <h1 className='font-bold text-xl'>• {titulo}</h1>
             </div>
             {products.length > 0 ? (
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
+                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-7'>
                     {products.map(product => (
                         <Card 
                         key={product._id} 
