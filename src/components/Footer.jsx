@@ -8,11 +8,16 @@ import { MdPix } from "react-icons/md";
 import { BsCreditCard2Back } from "react-icons/bs";
 import { FaBarcode } from "react-icons/fa6";
 
+import logoCurta from '../../public/Re..svg';
+
 
 export default function Footer() {
     return(
-        <div className='flex flex-col md:flex-row bg-stone-900 justify-evenly items-center w-full gap-5 text-white p-4 pb-19 pt-8 '>
-            <div className='items-start'>
+        <div className='flex flex-col md:flex-row bg-stone-900 justify-evenly items-center w-full gap-5 text-white p-8 pb-19'> 
+            <div>
+                <img src={logoCurta} alt="" className="w-40" />
+            </div>
+            <div className=''>
                 <h1 className='font-bold'>Nossas redes:</h1>
                 <div className='flex flex-col'>
                     <div>
@@ -29,7 +34,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='border-none md:border-x md:px-20 border-white/50'>
+            <div className=''>
                 <h1 className='font-bold'>Entre em contato:</h1>
                 <div className='flex flex-col'>
                     <div>

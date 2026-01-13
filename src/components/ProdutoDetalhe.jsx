@@ -13,15 +13,12 @@ export default function ProdutoDetalhePage ({ produto }) {
                         <li>Cor: {produto.cor}</li>
                         <li>Marca: {(produto.marca ? produto.marca : "Não informado")}</li>
                         <li>Composição: {produto.composicao}</li>
-                        {produto.medidas && (<li>Medidas
-                            <ul className='list-disc pl-7'>
-                                <li>Comprimento: {produto.medidas.comprimento} cm</li>
-                                <li>Busto: {produto.medidas.busto} cm</li>
-                                <li>Cintura: {produto.medidas.cintura} cm</li>
-                                <li>Quadril: {produto.medidas.quadril} cm</li>
+                        <li>Medidas</li>
+                        {produto.medidas && Object.entries(produto.medidas).map(([chave, valor]) => (
+                            <ul>
+                                <li key={chave} className="capitalize"> - {chave}: {valor} cm</li>
                             </ul>
-                        </li>
-                        )}
+                        ))}
                     </ul>
                 </div>
             </div>

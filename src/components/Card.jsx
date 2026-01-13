@@ -2,9 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Rectangle from '../assets/Rectangle.png'
 import { FaRegHeart } from "react-icons/fa";
-//<FaRegHeart />
 import { FaHeart } from "react-icons/fa";
-//<FaHeart />
 
 export default function Card({id, titulo, preco, imagens}) {
 
@@ -12,12 +10,13 @@ export default function Card({id, titulo, preco, imagens}) {
     const [isFavorited, setIsFavorited] = useState(false);
 
     const toggleFavorite = (e) => {
-        e.preventDefault();
+        e.preventDefault(); //evita que seja levado pelo link ao clicar no botão
         setIsFavorited(!isFavorited);
     }
 
     return (
-        <Link to={`/produtos/${id}`}>
+        //acao principal ao clicar no card
+        <Link to={`/produtos/${id}`}> 
             <div className='relative hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <button className='absolute z-10 top-4 right-4' onClick={toggleFavorite}>
                     {isFavorited ? <FaHeart className='text-neutral-50 text-2xl' /> : <FaRegHeart className='text-neutral-50 text-2xl' />}

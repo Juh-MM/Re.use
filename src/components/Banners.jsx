@@ -24,12 +24,12 @@ export default function Banners() {
             className="w-full h-full"
         />
 
-        <div className="flex gap-3 mt-4">
+        <div className="flex gap-2 mt-4">
             {images.map((_, index) => (
             <span
                 key={index}
-                className={`w-3 h-3 rounded-full ${
-                index === current ? 'bg-stone-600' : 'bg-gray-300'
+                className={`w-5 h-1 rounded-sm ${
+                index === current ? 'bg-stone-700' : 'bg-gray-300'
                 } transition-all duration-300`}
             />
             ))}

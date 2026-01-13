@@ -40,11 +40,11 @@ export default function Produto() {
     if (!product) return <p className="text-center py-20">Produto não encontrado.</p>;
 
     return (
-        <div className='flex flex-row bg-stone-50 h-screen'>
+        <div className='flex flex-row bg-stone-50 h-scren min-h-screen w-full'>
             <ReturnButton />
             <div className='flex flex-row pt-12 gap-6 justify-center items-start'>
                 <ProdutoGaleria imagens={product.imagens} titulo={product.titulo} />
-                <ProdutoDetalhe produto={product} />
+                <ProdutoDetalhe produto={ product ? product : "medidas não informadas"} />
             </div>
         </div>
     )

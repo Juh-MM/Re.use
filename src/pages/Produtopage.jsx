@@ -7,8 +7,10 @@ export default function ProdutoPage() {
     return (
         <div>
             <Header />
-            <Produto />
-            <Footer />
+            <div className='flex flex-col gap-8 bg-neutral-50'>
+                <Produto />
+                <Footer />
+            </div>           
             <FaixaFixa />
         </div>
     )
